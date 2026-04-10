@@ -4,6 +4,28 @@ A **Python-based Face Recognition Attendance System** that automatically marks a
 Built with **OpenCV**, **Tkinter**, and **MySQL**, featuring a modern GUI and auto-close camera logic for smooth operation.
 
 ---
+### 🏗️ System Architecture & Logic Flow
+This diagram illustrates the end-to-end pipeline, from raw camera frames to database updates.
+
+```
+graph TD
+    Start[Start Recognition] --> Cam[Initialize Camera Feed]
+    Cam --> Detect[Haar Cascade Face Detection]
+    Detect --> Process[Grayscale & Resize]
+    Process --> Predict[LBPH Pattern Matching]
+    Predict --> DB_Check{Match Found?}
+    
+    DB_Check -- Yes --> Log{Already Marked?}
+    DB_Check -- No --> Unknown[Label: Unknown]
+    
+    Log -- No --> Success[Mark Attendance & Audio Feedback]
+    Log -- Yes --> Duplicate[Skip & Status Update]
+    
+    Success --> Close[Auto-Close Camera]
+    Unknown --> Cam
+    Duplicate --> Close
+```
+
 
 ## 🚀 Features
 
