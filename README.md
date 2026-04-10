@@ -85,7 +85,7 @@ FaceRecognitionAttendanceSystem/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/FaceAttendanceSystem.git
+git clone https://github.com/bhupeshkd/FaceAttendanceSystem.git
 cd FaceAttendanceSystem
 ```
 
