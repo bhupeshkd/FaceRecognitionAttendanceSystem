@@ -7,7 +7,7 @@ Built with **OpenCV**, **Tkinter**, and **MySQL**, featuring a modern GUI and au
 ### 🏗️ System Architecture & Logic Flow
 This diagram illustrates the end-to-end pipeline, from raw camera frames to database updates.
 
-```
+```mermaid
 graph TD
     Start[Start Recognition] --> Cam[Initialize Camera Feed]
     Cam --> Detect[Haar Cascade Face Detection]
